@@ -18,11 +18,12 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'TestConnection1'
+    backendServiceArm: 'TestConnection'
     backendAzureRmResourceGroupName: 'terraform-rg-ik'
     backendAzureRmStorageAccountName: 'storagetfaccount'
     backendAzureRmContainerName: 'storagetfcontainer'
     backendAzureRmKey: 'terraform.tfstate'
+
     
     
 - task: TerraformTaskV3@3
@@ -33,7 +34,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    environmentServiceNameAzureRM: 'TestConnection1'
+    environmentServiceNameAzureRM: 'TestConnection'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
