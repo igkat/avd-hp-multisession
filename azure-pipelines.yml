@@ -17,6 +17,10 @@ steps:
 - task: TerraformTaskV3@3
   inputs:
     provider: 'azurerm'
+    command: 'init'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
     command: 'apply'
 
 - script: |
