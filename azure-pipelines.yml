@@ -19,6 +19,11 @@ steps:
     provider: 'azurerm'
     command: 'init'
     backendServiceArm: 'TestConnection1'
+    backendAzureRmResourceGroupName: 'terraform-rg-ik'
+    backendAzureRmStorageAccountName: 'storagetfaccount'
+    backendAzureRmContainerName: 'storagetfcontainer'
+    backendAzureRmKey: 'terraform.tfstate'
+    
     
 - task: TerraformTaskV3@3
   inputs:
