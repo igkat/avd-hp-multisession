@@ -6,6 +6,11 @@
 trigger:
 - main
 
+variables:
+bkstrgrg: 'main'
+bkstrg: 'main'
+bkcontainer: 'main'
+
 pool:
   vmImage: ubuntu-latest
 
@@ -18,10 +23,13 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
+    backendServiceArm: 'TestConnection1'
+    
 - task: TerraformTaskV3@3
   inputs:
     provider: 'azurerm'
     command: 'apply'
+    environmentServiceNameAzureRM: 'TestConnection1'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
