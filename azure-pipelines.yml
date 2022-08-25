@@ -6,11 +6,6 @@
 trigger:
 - main
 
-variables:
-bkstrgrg: 'main'
-bkstrg: 'main'
-bkcontainer: 'main'
-
 pool:
   vmImage: ubuntu-latest
 
