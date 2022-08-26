@@ -36,7 +36,7 @@ resource "azurerm_subnet_network_security_group_association" "nsg_association" {
 
 resource "azurerm_network_interface" "sessionhost_nic" {
   count               = 2
-  name                = "nic-ansuu-${count.index}"
+  name                = "nic-${count.index}"
   location            = azurerm_resource_group.rg-avd.location
   resource_group_name = azurerm_resource_group.rg-avd.name
 

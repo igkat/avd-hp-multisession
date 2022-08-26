@@ -82,15 +82,6 @@ resource "azurerm_virtual_desktop_workspace_application_group_association" "work
   application_group_id = azurerm_virtual_desktop_application_group.desktopapp.id
 }
 
-resource "azurerm_storage_account" "FSLogixStorageAccount" {
-  name                     = "avvdfslogixtest"
-  location                 = azurerm_resource_group.rg-avd.location
-  resource_group_name      = azurerm_resource_group.rg-avd.name
-  account_tier             = "Premium"
-  account_replication_type = "LRS"
-  account_kind              = "StorageV2"
-}
-
 resource "azurerm_windows_virtual_machine" "avd_sessionhost" {
   depends_on = [
     azurerm_network_interface.sessionhost_nic
