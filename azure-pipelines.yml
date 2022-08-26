@@ -8,10 +8,10 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+steps:
 - task: TerraformInstaller@0
   inputs:
-    terraformVersion: '0.12.26'
+    terraformVersion: 'latest'
 
 - task: TerraformTaskV3@3
   inputs:
