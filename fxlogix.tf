@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "FSLogixStorageAccount" {
-  name                     = "avdfslogixtest"
+  name                     = "avvdfslogixtest"
   location                 = azurerm_resource_group.rg-avd.location
   resource_group_name      = azurerm_resource_group.rg-avd.name
   account_tier             = "Premium"
